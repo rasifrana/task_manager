@@ -1,1 +1,1 @@
-web: python3 task_manager/app.py
+web: python app.py
