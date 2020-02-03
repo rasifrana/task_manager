@@ -1,1 +1,1 @@
-web: python task_manager/.theia/app.py
+web: python app.py
