@@ -71,6 +71,20 @@ def get_catagories():
     return render_template("catagories.html", catagories=all_catagories)
 
 
+# insert catagory
+@app.route('/insert_catagory', methods=['POST'])
+def insert_catagory():
+    catagory_doc = {"catagory_name": request.form.get('catagory_name')}
+    mongo.db.catagories.insert_one(catagory_doc)
+    return redirect(url_for('get_catagories'))
+
+
+# Show catagory form
+@app.route("/add_catagory")
+def add_catagory():
+    return render_template("addcatagory.html")
+
+
 #  Edit a catagory
 @app.route('/edit_catagory/<cat_id>')
 def edit_catagory(cat_id):
@@ -83,13 +97,19 @@ def edit_catagory(cat_id):
 # Update Catagory
 @app.route("/update_catagory/<catagory_id>", methods=["POST"])
 def update_catagory(catagory_id):
-    print(catagory_id)
-    mongo.db.catagories.update(
+    mongo.db.catagories.update_one(
         {'_id': ObjectId(catagory_id)},
         {
             '$set': {
                 'catagory_name': request.form.get("catagory_name")
             }})
+    return redirect(url_for("get_catagories"))
+
+
+# Delete catagory
+@app.route("/delete_catagory/<catagory_id>")
+def delete_catagory(catagory_id):
+    mongo.db.catagories.remove({'_id': ObjectId(catagory_id)})
     return redirect(url_for("get_catagories"))
 
 
