@@ -1,23 +1,77 @@
-# Code Institute
+# Stacked. (Investment Portfolio)
 
-Welcome Asif Rana,
+An investment portfolio tracker designed for all types of Investers to keep track of their assets
+## UX
 
-We have preinstalled all of the tools you need to get started.
+This project is for invester to keep record of financial transaction
 
-To run a frontend application in GitPod, in the terminal, type:
+It is easy to start playing and sequences to follow.
 
-`python3 -m http.server`
+Follow the steps below -
 
-A blue button should appear to click: *Expose*,
+- Add any investment
+- Edit, delete investment
+- Add type of investment
+- Change or delete investment
+- Beautiful view
+- No installation
 
-Another blue button should appear to click: *Open Browser*.
+## Wireframes
 
-To run a backend python file, type `python3 app.py`, if your python file is named `app.py` of course.
+Wireframe for this projects (links are below).
 
-A blue button should appear to click: *Expose*,
+- Desktop wireframe: https://github.com/rasifrana/milestone2-project/blob/master/mockups/Simon_desktop.pdf
 
-Another blue button should appear to click: *Open Browser*.
+- Mobile Devices wireframe: https://github.com/rasifrana/milestone2-project/blob/master/mockups/Simon_mobile.pdf
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons. 
+## Features
 
-Happy coding!
+### Visual representation of portfolio
+
+To beat the Simon game, players need to remember the color pattern and repeat it by pressing the colored buttons on the game unit in the correct order. It starts off at a nice steady pace, but the more you play, the more complicated the patterns become, building suspense with each turn. Players try to hit a new high score by completing the longest sequence possible without messing up.
+
+- **Section 1** is Landing Page with easy navigation and main header
+
+- **Section 2** Beautiful cards with portfolio types
+## Technologies Used
+
+- HTML
+
+  - Basic html structure / markup.
+
+- CSS3
+
+  - CSS3 custom styling
+
+- Bootstrap
+
+  - for styling the game and used CSS Grid for layouts and positioning elements.
+
+- Google fonts
+  - to make website beautifully, Montserrat font-family was used referencing https://fonts.google.com/ CDN
+
+## Testing
+
+J
+
+This project is completely responsive with different layout on small and mobile devices. This was done using media queries.
+
+## Deployment
+
+Local git repository was initated in the begining of this project and several commits were made during the development.
+
+Project was pushed to remote repository on https://github.com on master branch.
+
+## Heroku
+
+Project is deployed at https://task-manager-asif.herokuapp.com/
+
+## Credits
+
+### Media
+
+- The photo used in this site were obtained from https://unsplash.com
+
+### Acknowledgements
+
+- I received inspiration for this project from dribble
