@@ -9,7 +9,10 @@
 
 
 <div class="container">
-<h3>Investment Portfolio</h3>
+<h3>Add Investment Type</h3>
+
+    <a href="{{url_for('add_catagory')}}" class="btn btn-info m-5">Add catagory</a>
+
 <ul class="list-group">
     {% for catagory in catagories %}
   <li class="list-group-item">
@@ -37,7 +40,7 @@
 
 
 
-<a href="{{url_for('add_catagory')}}" class="btn btn-success mt-5">Add catagory</a>
+
 
 
 

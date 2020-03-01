@@ -10,6 +10,9 @@
 <div class="container">
 <h3>Investment Portfolio</h3>
 
+    <a href="{{url_for('add_task')}}" class="btn btn-success m-5">Add Portfolio</a>
+
+
     {% for task in tasks %}
   
     <div class="row my-1">
@@ -60,7 +63,7 @@
 </ul>
         
 
-<a href="{{url_for('add_task')}}" class="btn btn-success mt-5">Add Task</a>
+
 
 
 
