@@ -4,27 +4,46 @@
 {% block content %}    
 
 
+
+
+
+
+<div class="container">
 <h3>Investment Portfolio</h3>
-
-
-<ul class="collapsible">
-	{% for catagory in catagories %}
-    
-	<li>
-    
-		<div class="collapsible-header">
-                <a href="{{url_for('delete_catagory', catagory_id = catagory._id)}}" class="waves-effect waves-light btn task-btn">Done</a>
-                <a href="{{url_for('edit_catagory', cat_id = catagory._id)}}" class="waves-effect waves-light btn task-btn blue">Edit </a>
-
-            <div class="col s9">
-                <strong>{{ catagory.catagory_name }}</strong>
-            </div>
-        
+<ul class="list-group">
+    {% for catagory in catagories %}
+  <li class="list-group-item">
+    <div class="row">
+        <div class="col-3">
+            <a href="{{url_for('delete_catagory', catagory_id = catagory._id)}}" class="btn btn-sm btn-outline-danger mb-1">Remove</a>
+                <a href="{{url_for('edit_catagory', cat_id = catagory._id)}}" class="btn btn-sm btn-outline-warning">Edit </a>
         
         
         </div>
-	</li>
-	{% endfor %}
+        <div class="col-9">
+           <strong>{{ catagory.catagory_name }}</strong>
+        
+        </div>
+    
+    
+    </div>
+
+
+
+  </li>
+  {% endfor %}
 </ul>
+
+
+
+
+<a href="{{url_for('add_catagory')}}" class="btn btn-success mt-5">Add catagory</a>
+
+
+
+
+</div>
+
+
 
 {% endblock %}

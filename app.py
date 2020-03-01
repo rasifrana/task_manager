@@ -12,8 +12,8 @@ app.config["MONGO_URI"] = "mongodb+srv://root:Dublin15@mycluster-sw86k.mongodb.n
 mongo = PyMongo(app)
 
 @app.route("/")
-def hello():
-    return "<h1 style='color:blue;text-align:center;'>Hellooo World</h1>"
+def home():
+    return render_template("index.html")
 
 # get tasks route
 @app.route("/get_tasks")

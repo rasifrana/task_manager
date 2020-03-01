@@ -4,31 +4,68 @@
 {% block content %}    
 
 
-<h3>Tasks List</h3>
 
 
-<ul class="collapsible">
-	{% for task in tasks %}
-    
-	<li>
-    
-		<div class="collapsible-header">
-            <div class="col s3">
-                <i class="material-icons">expand_more</i>
-                <a href="{{url_for('delete_task', task_id = task._id)}}" class="waves-effect waves-light btn task-btn">Done</a>
-                <a href="{{url_for('edit_task', task_id = task._id)}}" class="waves-effect waves-light btn task-btn blue">Edit </a>
-            </div>
-            <div class="col s9">
-                <strong>{{ task.task_name }}</strong> -- <em>{{task.due_date}}</em>
-            </div>
-        
-        
+
+<div class="container">
+<h3>Investment Portfolio</h3>
+
+    {% for task in tasks %}
+  
+    <div class="row my-1">
+        <div class="col-md-4 col-sm-3">
+            <img src="https://images.unsplash.com/photo-1524544187526-2b2855b65f16?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1601&q=80" class="img-thumbnail" alt="Responsive image">
         
         </div>
-		<div class="collapsible-body"><span>{{ task.task_description }}</span></div>
-		<p></p>
-	</li>
-	{% endfor %}
+        <div class="col-md-8 col-sm-9">
+           <div class="jumbotron">
+  <h3> {{ task.task_name }} </h3>
+  <p> {{ task.task_description }} </p>
+  <p> <strong>Date Acquired</strong> - <em>{{task.due_date}}</em></p>
+  <div class="row my-5">
+    <div class="col-6 col-sm-3 bg-primary p-2">
+    <p> <strong>Date Acquired</strong> </p><p class="text-white"><em>{{task.due_date}}</em></p>
+    
+    
+    </div>
+  <div class="col-6 col-sm-3 bg-success p-2">
+    <p> <strong>Date Acquired</strong> </p><p class="text-white"><em>{{task.due_date}}</em></p>
+    
+    
+    </div>
+    <div class="col-6 col-sm-3 bg-info p-2">
+    <p> <strong>Date Acquired</strong> </p><p class="text-white"><em>{{task.due_date}}</em></p>
+    
+    
+    </div>
+    <div class="col-6 col-sm-3 bg-warning p2">
+    <p> <strong>Date Acquired</strong> </p><p class="text-white"><em>{{task.due_date}}</em></p>
+    
+    
+    </div>
+  
+  </div>
+  <a href="{{url_for('delete_task', task_id = task._id)}}" class="btn btn-danger btn-sm">Done</a>
+                <a href="{{url_for('edit_task', task_id = task._id)}}" class="btn btn-warning btn-sm">Edit </a>
+ 
+</div>
+        
+        </div>
+    
+    
+    </div>
+
+
+  {% endfor %}
 </ul>
+        
+
+<a href="{{url_for('add_task')}}" class="btn btn-success mt-5">Add Task</a>
+
+
+
+
+</div>
+
 
 {% endblock %}
