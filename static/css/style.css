@@ -3,6 +3,8 @@
 body {
     height: 100%;
     margin: 0;
+    font-family: 'Montserrat' ;
+    
 }
 
 
@@ -228,5 +230,14 @@ height: 70vh;
 @media only screen and (max-width: 600px) {
   .main-heading {
     font-size: 2rem;
+  }
+
+  .add-portfolio-form .form-img {
+      display: none;
+  }
+
+  .add-portfolio-form .form-container {
+      width: 100% !important;
+      
   }
 }

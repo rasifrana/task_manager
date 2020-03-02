@@ -24,7 +24,7 @@
            <div class="jumbotron">
   <h3> {{ task.task_name }} </h3>
   <p> {{ task.task_description }} </p>
-  <p> <strong>Date Acquired</strong> - <em>{{task.due_date}}</em></p>
+  
   <div class="row my-5">
     <div class="col-6 col-sm-3 bg-primary p-2">
     <p> <strong>Date Acquired</strong> </p><p class="text-white"><em>{{task.due_date}}</em></p>
@@ -32,17 +32,17 @@
     
     </div>
   <div class="col-6 col-sm-3 bg-success p-2">
-    <p> <strong>Date Acquired</strong> </p><p class="text-white"><em>{{task.due_date}}</em></p>
+    <p> <strong>Total Value</strong> </p><p class="text-white"><em>{{task.is_urgent}}</em></p>
     
     
     </div>
     <div class="col-6 col-sm-3 bg-info p-2">
-    <p> <strong>Date Acquired</strong> </p><p class="text-white"><em>{{task.due_date}}</em></p>
+    <p> <strong>Invesrtment Type</strong> </p><p class="text-white"><em>{{task.catagory_name}}</em></p>
     
     
     </div>
     <div class="col-6 col-sm-3 bg-warning p2">
-    <p> <strong>Date Acquired</strong> </p><p class="text-white"><em>{{task.due_date}}</em></p>
+    <p> <strong>Profit / Loss</strong> </p><p class="text-white"><em>-- %</em></p>
     
     
     </div>

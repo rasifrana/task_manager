@@ -3,39 +3,40 @@
 {% block content %}
 
 
+<section class="add-portfolio-form bg-warning p-5 d-flex align-items-center flex-column">
 
-<div class="container">
-	<h3> Edit your token. </h3>
-	<div class="row">
-		<form action="{{ url_for('update_catagory', catagory_id=cat._id) }}" method="POST" class="col s12">
+<h3> Edit Investment Type. </h3>
+<div class="container form-container w-75 mt-4">
 
+
+    <div class="row">
+
+
+        <div class="col-sm-4 form-img" >
+        <img  src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80" alt="" class="img-fluid">
         
-	    <div class="row">
-				<div class="input-field col s12">
-					<i class="material-icons prefix">assignment</i>
-					<input id="task" type="text" class="validate" name="catagory_name" value="{{ cat.catagory_name }}">
-					<label for="task">Catagory Name</label>
-				</div>
-		</div>
-			
+        </div>
+        <div class="col-sm-8">
+        <form class="add-portfolio-form" action="{{ url_for('update_catagory', catagory_id=cat._id) }}" method="POST">
 
-			
-
-			<!-- Switch -->
-			
-            <div class="row">
-<div class="input-field col s12">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-    <i class="material-icons right">send</i>
-  </button>
-  </div>
-  </div>
-		</form>
-	</div>
-
-	<!-- switch -->
     
+  <div class="form-group">
+  <label for="catagory_name">Investment Type</label>
+    <input id="catagory_name" type="text" class="form-control" name="catagory_name" value="{{ cat.catagory_name }}">
+					
+  </div>
+
+  <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+</form>
+        
+        </div>
+    
+    </div>
+
 
 </div>
+
+
+</section>
 
 {% endblock %}

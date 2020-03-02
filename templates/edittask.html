@@ -4,16 +4,29 @@
 
 
 
-<div class="container">
-	<h3> Edit A Task </h3>
-	<div class="row">
-		<form action="{{ url_for('update_task', task_id=task._id) }}" method="POST" class="col s12">
+<section class="add-portfolio-form bg-info p-5 d-flex align-items-center flex-column">
 
-        <div class="row">
-            <div class="input-field col s12">
+<h2> Edit A Portfolio</h2>
+<div class="container form-container w-75">
+
+
+    <div class="row">
+
+        
+
+        <div class="col-sm-4 form-img" >
+        <img  src="https://images.unsplash.com/photo-1556155092-8707de31f9c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1268&q=80" alt="" class="img-fluid">
+        
+        </div>
+        <div class="col-sm-8">
+        <form class="add-portfolio-form" action="{{ url_for('update_task', task_id=task._id) }}" method="POST">
+
     
-                <select id="catagory" name="catagory_name">
-                        <option value="" disabled selected>Choose your option</option>
+
+  <div class="form-group">
+    <label for="catagory_name">Select Investment Catagory</label>
+    <select class="custom-select" id="catagory_name" name="catagory_name">
+    <option value="" selected>Choose your option</option>
                         {% for cat in catagories %}
                             {% if cat.catagory_name == task.catagory_name %}
                                 <option selected value="{{cat.catagory_name}}">{{cat.catagory_name}}</option>
@@ -21,59 +34,49 @@
                                 <option value="{{cat.catagory_name}}">{{cat.catagory_name}}</option>
                             {% endif %}
                         {% endfor %}
-                </select>
-                <label>Select Catagory</label>
-            </div>
-        </div>
-	    <div class="row">
-				<div class="input-field col s12">
-					<i class="material-icons prefix">assignment</i>
-					<input id="task" type="text" class="validate" name="task_name" value="{{ task.task_name }}">
-					<label for="task">Task Name</label>
-				</div>
-		</div>
-			<div class="row">
-				<div class="input-field col s12">
-					<i class="material-icons prefix">subject</i>
-					<textarea name="task_description" id="task_description" class="materialize-textarea"> {{task.task_description}} </textarea>
-					<label for="task_description">Task Description {{ task.task_description }}</label>
-				</div>
-			</div>
 
-			<div class="row">
-				<div class="input-field col s12" id="matfix">
-					<i class="material-icons prefix">today</i>
-					<input id="due_date" type="date"  class="datepicker" value="{{ task.due_date }}" name="due_date">
-					<label for="due_date">Date</label>
-				</div>
-			</div>
-
-			<!-- Switch -->
-			<div class="switch">
-				<label>
-                    {% if task.is_urgent %}
-                        <input type="checkbox" id="is_urgent" name="is_urgent"  checked>
-                    {% else %}
-                        <input type="checkbox" id="is_urgent" name="is_urgent" >
-                    {% endif %}
-      <span class="lever"></span>
-      Is Urgent
-    </label>
-			</div>
-            <div class="row">
-<div class="input-field col s12">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Edit Task
-    <i class="material-icons right">send</i>
-  </button>
-  </div>
-  </div>
-		</form>
-	</div>
-
-	<!-- switch -->
+  </select>
     
+  </div>
+  <div class="form-group">
+  <label for="task">Portfolio Name</label>
+    <input id="task" type="text" class="form-control" name="task_name" value="{{ task.task_name }}">
+					
+  </div>
+
+  <div class="form-group">
+  <label for="task_description">Portfolio Description</label>
+  <textarea name="task_description" id="task_description" class="form-control"> {{ task.task_description }} </textarea>
+</div>
+
+<div class="form-group">
+    <label for="is_urgent">Total Value &euro; </label>
+    <input type="text" class="form-control" id="is_urgent" name="is_urgent" placeholder="Value" value="{{task.is_urgent}}">
+  </div>
+  
+  <div class="form-group">
+  <label for="due_date">Date</label>
+    <input id="due_date" type="date"  class="form-control" name="due_date" value="{{ task.due_date }}">
+					
+  </div>
+  <button type="submit" class="btn btn-lg btn-success">Submit</button>
+</form>
+        
+        
+        
+        
+        </div>
+    
+    
+    
+    
+    </div>
+
 
 </div>
+
+
+</section>
 
 
 
