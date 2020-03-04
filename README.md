@@ -4,8 +4,8 @@ An investment portfolio tracker designed for all types of Investers to keep trac
 
 ## UX
 
-If you have an unvestment portfolio and want to keep the record of all of your investment portfolio then Stacked is the perfect way of keeping track of every single change of
-your investment. whether it is traditional assets like Real Estate, Stocks bonds and others or Digital Asssets like Bitcoin, Litecoin, Ethereum and other altcoins, you store all the information and history of these assets in your profile.
+If you have an investment portfolio and want to keep the record of all of your investment portfolio then Stacked is the perfect way of keeping track of every single change of
+your investment. whether it is traditional assets like Real Estate, Stocks, bonds and others or Digital Asssets like Bitcoin, Litecoin, Ethereum and other altcoins, you can store all the information and history of these assets in your profile.
 
 It is easy to create portfolio, add more assets to portfolio , make any changes and track all activities
 
@@ -23,9 +23,11 @@ The following activities can be performed -
 
 Wireframe for this projects (links are below).
 
-- Desktop wireframe: https://github.com/rasifrana/milestone2-project/blob/master/mockups/Simon_desktop.pdf
+- Desktop wireframe: https://github.com/rasifrana/task_manager/blob/master/static/mockups/landing-desktop.pdf
 
-- Mobile Devices wireframe: https://github.com/rasifrana/milestone2-project/blob/master/mockups/Simon_mobile.pdf
+- Mobile Devices wireframe: https://github.com/rasifrana/task_manager/blob/master/static/mockups/mobile-version.pdf
+
+- All wireframes - https://github.com/rasifrana/task_manager/tree/master/static/mockups
 
 ## Features
 
@@ -33,6 +35,10 @@ Wireframe for this projects (links are below).
 - Create tailored portfolio or multiple portfolios
 - Manage portfolio on the go
 
+## Future Developments
+
+ This application can be improved in many ways. Authantication and authorisation is first in the list. This can be connecting to many exchanges
+ using Public API and real time data can be fetched showing the latest price of assets. More financial instruments can also be added, like budget planner and savings portfolio.
 
 ### Visual representation of portfolio
 
@@ -85,7 +91,7 @@ This project is completely responsive with different layout on small and mobile 
 
 Local git repository was initated in the begining of this project and several commits were made during the development.
 
-Project was pushed to remote repository on https://github.com on master branch.
+Project was pushed to remote repository on https://github.com/rasifrana/task_manager on master branch.
 
 ## Heroku
 
