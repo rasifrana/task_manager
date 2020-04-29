@@ -17,7 +17,7 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 
@@ -26,9 +26,9 @@
   <body>
     <!-- Navbar -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container d-flex">
-        <a class="navbar-brand" href="{{url_for('home')}}">Stacked</a>
+    <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top">
+      <div class="container text-white">
+        <a class="navbar-brand " href="{{url_for('home')}}">Stacked</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -40,15 +40,15 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link active" href="{{url_for('get_tasks')}}"
               >Portfolio <span class="sr-only">(current)</span></a
             >
             <a class="nav-item nav-link" href="{{url_for('get_catagories')}}">Investments</a>
-            <a class="nav-item nav-link rounded border border-warning text-white" href="{{url_for('add_task')}}">Add Portfolio</a>
+            <a class="nav-item nav-link rounded border border-warning" href="{{url_for('add_task')}}">Add Portfolio</a>
             <a
-              class="nav-item nav-link border border-danger rounded ml-2 text-white"
+              class="nav-item nav-link border border-danger rounded ml-2"
               href="{{url_for('add_catagory')}}"
               >Add Type</a
             >

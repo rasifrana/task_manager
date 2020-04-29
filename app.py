@@ -76,8 +76,8 @@ def get_catagories():
 # insert catagory
 @app.route('/insert_catagory', methods=['POST'])
 def insert_catagory():
-    catagory_doc = {"catagory_name": request.form.get('catagory_name')}
-    mongo.db.catagories.insert_one(catagory_doc)
+    # catagory_doc = {"catagory_name": request.form.get('catagory_name')}
+    mongo.db.catagories.insert_one(request.form.to_dict())
     return redirect(url_for('get_catagories'))
 
 
