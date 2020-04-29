@@ -13,6 +13,7 @@ body {
     height: 100%;
     margin: 0;
     font-family: 'Karla', sans-serif;
+    overflow-x: hidden; 
 }
 
 /* nav.navbar {
@@ -26,40 +27,38 @@ height: 60vh;
 
 }
 
-div.hero-img-container {
+/* div.hero-img-container {
     position: relative;
-}
+} */
 
-img.hero {
+/* img.hero {
    position: absolute;
     
-}
+} */
 
 img.phone {
     width: 277px;
-    right: 6%;
-    top: -40px;
+    transform: translate(30%, -30%);
     z-index: 3;
 }
 
 img.leaf {
-    top: 98px;
-    
-    max-width: 80%;
+    transform: translate(5%, 30%);
+    max-width: 100%;
     z-index: 1;
 }
 
 /* Section Features */
 
-.asset-type {
-    height: 60vh;
-}
+/* .asset-type {
+    height: 600px;
+} */
 
 /* Section Payment */
 
-.payment-section {
-    height: 60vh;
-}
+/* .payment-section {
+    height: 600px;
+} */
 
 
 
@@ -150,10 +149,10 @@ img.leaf {
   background-color: rosybrown;
 }
 
-/* .feature img {
+.feature img {
   width: 12px;
   height: auto;
-} */
+}
 
 .most-popular {
   position: absolute;

@@ -6,10 +6,10 @@
 
 
 <!-- Main Section -->
-<main class="header p-3 d-flex align-items-center">
+<main class="header p-3">
 
 	<div class="container">
-		<div class="row">
+		<div class="row d-flex align-items-center justify-content-center">
 			<div class="col-xs-12 col-sm-6">
 				<div class="jumbotron jumbotron-fluid">
 					<div class="container">
@@ -24,8 +24,8 @@
 				</div>
 			</div>
             <div class="col-xs-12 col-sm-6 hero-img-container">
-                <img src="{{url_for('static', filename='img/leaf.png')}}" class="hero leaf" alt="...">
-				<img src="{{url_for('static', filename='img/phone.png')}}" class="hero phone" alt="...">
+                <img src="{{url_for('static', filename='img/leaf.png')}}" class="hero leaf img-fluid" alt="...">
+				<img src="{{url_for('static', filename='img/phone.png')}}" class="hero phone img-fluid" alt="...">
 			</div>
 		</div>
 	</div>
@@ -88,7 +88,7 @@
 
 
 <!-- Services -->
-<section class="services bg-light">
+<section class=" bg-light">
 
 	<div class="container">
 		<div class="row my-5 d-flex align-items-center">
@@ -155,7 +155,7 @@
 				</div>
 
                 <div class="col-sm-6">
-				<img src="{{url_for('static', filename='img/invest.png')}}" style="width: 100%;" class="order-1">
+				<img src="{{url_for('static', filename='img/invest.png')}}" style="width: 100%;" class="img-fluid">
 
 </div>
 
@@ -173,34 +173,34 @@
       <div class="price-column">
         <div class="price-header">
           <div class="price">
-            <div class="dollar-sign">$</div>
-            10
-            <div class="per-month">/mo</div>
+            
+            FREE
+            
           </div>
           <div class="plan-name">basic</div>
           <div class="divider"></div>
           <div class="feature">
-            <img src="check.png" alt="" />
+            <img src="{{url_for('static', filename='img/check.png')}}">
             Feature A
           </div>
           <div class="feature">
-            <img src="check.png" alt="" />
+            <img src="{{url_for('static', filename='img/check.png')}}">
             Feature B
           </div>
           <div class="feature">
-            <img src="check.png" alt="" />
+            <img src="{{url_for('static', filename='img/check.png')}}">
             Feature C
           </div>
           <div class="feature">
-            <img src="check.png" alt="" />
+            <img src="{{url_for('static', filename='img/check.png')}}">
             Feature D
           </div>
           <div class="feature">
-            <img src="check.png" alt="" />
+            <img src="{{url_for('static', filename='img/check.png')}}">
             Feature E
           </div>
           <div class="feature">
-            <img src="check.png" alt="" />
+            <img src="{{url_for('static', filename='img/check.png')}}">
             Feature F
           </div>
           <a href="{{url_for('add_task')}}" class="btn btn-success mt-2"> Create Portfolio</a>
@@ -212,7 +212,7 @@
         <div class="price-header">
           <div class="price">
             <div class="dollar-sign">$</div>
-            20
+            5
             <div class="per-month">/mo</div>
           </div>
           <div class="plan-name">Professional</div>
@@ -223,23 +223,23 @@
             Feature A
           </div>
           <div class="feature">
-            <img src="check.png" alt="" />
+            <img src="{{url_for('static', filename='img/check.png')}}">
             Feature B
           </div>
           <div class="feature">
-            <img src="check.png" alt="" />
+            <img src="{{url_for('static', filename='img/check.png')}}">
             Feature C
           </div>
           <div class="feature">
-            <img src="check.png" alt="" />
+            <img src="{{url_for('static', filename='img/check.png')}}">
             Feature D
           </div>
           <div class="feature">
-            <img src="check.png" alt="" />
+            <img src="{{url_for('static', filename='img/check.png')}}">
             Feature E
           </div>
           <div class="feature">
-            <img src="check.png" alt="" />
+            <img src="{{url_for('static', filename='img/check.png')}}">
             Feature F
           </div>
           <a href="{{url_for('add_task')}}" class="btn mt-2 btn-light text-success"> Create Portfolio</a>
@@ -250,33 +250,33 @@
         <div class="price-header">
           <div class="price">
             <div class="dollar-sign">$</div>
-            50
+            10
             <div class="per-month">/mo</div>
           </div>
           <div class="plan-name">Enterprise</div>
           <div class="divider"></div>
           <div class="feature">
-            <img src="check.png" alt="" />
+            <img src="{{url_for('static', filename='img/check.png')}}">
             Feature A
           </div>
           <div class="feature">
-            <img src="check.png" alt="" />
+            <img src="{{url_for('static', filename='img/check.png')}}">
             Feature B
           </div>
           <div class="feature">
-            <img src="check.png" alt="" />
+            <img src="{{url_for('static', filename='img/check.png')}}">
             Feature C
           </div>
           <div class="feature">
-            <img src="check.png" alt="" />
+            <img src="{{url_for('static', filename='img/check.png')}}">
             Feature D
           </div>
           <div class="feature">
-            <img src="check.png" alt="" />
+            <img src="{{url_for('static', filename='img/check.png')}}">
             Feature E
           </div>
           <div class="feature">
-            <img src="check.png" alt="" />
+            <img src="{{url_for('static', filename='img/check.png')}}">
             Feature F
           </div>
           <a href="{{url_for('add_task')}}" class="btn mt-2 btn-success"> Create Portfolio</a>
