@@ -9,6 +9,9 @@
   --body-font-family: "Lato", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     height: 100%;
     margin: 0;
@@ -16,9 +19,29 @@ body {
     overflow-x: hidden; 
 }
 
-/* nav.navbar {
-    background-color:rgb(87,151,54);
-} */
+nav {
+    height: 4rem;
+}
+
+.navbar-nav {
+    height: 3rem;
+    line-height: 2rem;
+}
+
+.nav-link {
+    color: #000;
+    font-weight: bold;
+    padding-bottom: 0.2rem !important;
+    transition: 0.5s all ease-in-out;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid #5cb85c;
+}
+
+.add-link {
+    display: inline-block;
+}
 
 main.header {
   background: #e5ecee;
@@ -68,9 +91,7 @@ img.leaf {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  width: 100%;
-  margin: 1rem;
-  padding: 4rem 1rem;
+  padding: 6rem 1rem !important;
 
 }
 
@@ -82,6 +103,10 @@ img.leaf {
   flex-basis: 0;
   max-width: 275px;
   border-radius: 8px;
+}
+
+.feature i {
+    color: #fff;
 }
 
 .popular {
@@ -190,10 +215,11 @@ img.leaf {
   transform: scale(1.2);
 }
 
+.message {
+    background-color: #e5ecee;
+}
 
-
-.main {
-        background-color: #0275d8;
+.msg-heading {
         display: flex;
         justify-content: center;
         align-items: center;

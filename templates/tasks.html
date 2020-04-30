@@ -1,74 +1,63 @@
 {% extends "base.html" %}
 
-
-{% block content %}    
-
-
-
-
-
-<div class="container">
-<h3>Investment Portfolio</h3>
-
-    <a href="{{url_for('add_task')}}" class="btn btn-success m-5">Add Portfolio</a>
-
-
-    {% for task in tasks %}
-  
-    <div class="row my-1">
-        <div class="col-md-4 col-sm-3">
-            <img src="https://images.unsplash.com/photo-1524544187526-2b2855b65f16?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1601&q=80" class="img-thumbnail" alt="Responsive image">
-        
-        </div>
-        <div class="col-md-8 col-sm-9">
-           <div class="jumbotron bg-light">
-  <h3> {{ task.task_name }} </h3>
-  <p> {{ task.task_description }} </p>
-  
-  <div class="row my-5">
-    <div class="col-6 bg-primary p-2">
-    <p> <strong>Date Acquired</strong> </p><p class="text-white"><em>{{task.due_date}}</em></p>
-    
-    
-    </div>
-  <div class="col-6 bg-success p-2">
-    <p> <strong>Total Value</strong> </p><p class="text-white"><em>{{task.is_urgent}}</em></p>
-    
-    
-    </div>
-    <div class="col-6 bg-info p-2">
-    <p> <strong>Invesrtment Type</strong> </p><p class="text-white"><em>{{task.catagory_name}}</em></p>
-    
-    
-    </div>
-    <div class="col-6 bg-warning p2">
-    <p> <strong>Profit / Loss</strong> </p><p class="text-white"><em>-- %</em></p>
-    
-    
-    </div>
-  
-  </div>
-  <a href="{{url_for('delete_task', task_id = task._id)}}" class="btn btn-danger btn-sm">Done</a>
-                <a href="{{url_for('edit_task', task_id = task._id)}}" class="btn btn-warning btn-sm">Edit </a>
- 
-</div>
-        
-        </div>
-    
-    
-    </div>
-
-
-  {% endfor %}
-</ul>
-        
-
-
-
-
-
-
-</div>
-
-
+{% block title%}
+Portfolio
 {% endblock %}
+
+
+{% block content %}  
+<div class="container">
+	<h3>Investment Portfolio</h3>
+
+	<a href="{{url_for('add_task')}}" class="btn btn-success m-5">Add Portfolio</a>
+
+
+	{% for task in tasks %}
+
+	<div class="row my-1">
+		<div class="col-md-4 col-sm-3">
+			<img src="https://images.unsplash.com/photo-1524544187526-2b2855b65f16?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1601&q=80" class="img-thumbnail" alt="Responsive image">
+
+        </div>
+			<div class="col-md-8 col-sm-9">
+				<div class="jumbotron bg-light">
+					<h3> {{ task.task_name }} </h3>
+					<p> {{ task.task_description }} </p>
+
+					<div class="row my-5">
+						<div class="col-6 bg-primary p-2">
+							<p> <strong>Date Acquired</strong> </p>
+							<p class="text-white"><em>{{task.due_date}}</em></p>
+
+
+						</div>
+						<div class="col-6 bg-success p-2">
+							<p> <strong>Total Value</strong> </p>
+							<p class="text-white"><em>{{task.is_urgent}}</em></p>
+
+
+						</div>
+						<div class="col-6 bg-info p-2">
+							<p> <strong>Invesrtment Type</strong> </p>
+							<p class="text-white"><em>{{task.catagory_name}}</em></p>
+						</div>
+						<div class="col-6 bg-warning p2">
+							<p> <strong>Profit / Loss</strong> </p>
+							<p class="text-white"><em>-- %</em></p>
+						</div>
+
+					</div>
+					<a href="{{url_for('delete_task', task_id = task._id)}}" class="btn btn-danger btn-sm">Done</a>
+					<a href="{{url_for('edit_task', task_id = task._id)}}" class="btn btn-warning btn-sm">Edit </a>
+
+				</div>
+			</div>
+		</div>
+
+
+		{% endfor %}
+		</ul>
+	</div>
+
+
+	{% endblock %}

@@ -21,14 +21,16 @@
 
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 
-    <title>Portfolio</title>
+    <title>{% block title%}
+
+    {% endblock %}</title>
   </head>
   <body>
     <!-- Navbar -->
 
     <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top">
-      <div class="container text-white">
-        <a class="navbar-brand " href="{{url_for('home')}}">Stacked</a>
+      <div class="container">
+        <a class="navbar-brand text-success text-uppercase" href="{{url_for('home')}}">Stacked</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -42,15 +44,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="{{url_for('get_tasks')}}"
+            <a class="nav-item nav-link" href="{{url_for('get_tasks')}}"
               >Portfolio <span class="sr-only">(current)</span></a
             >
             <a class="nav-item nav-link" href="{{url_for('get_catagories')}}">Investments</a>
-            <a class="nav-item nav-link rounded border border-warning" href="{{url_for('add_task')}}">Add Portfolio</a>
+            <a class="nav-item nav-link" href="#saving">Save</a>
             <a
-              class="nav-item nav-link border border-danger rounded ml-2"
-              href="{{url_for('add_catagory')}}"
-              >Add Type</a
+              class="nav-item nav-link ml-2"
+              href="#pricing"
+              >Pricing</a
             >
           </div>
         </div>
