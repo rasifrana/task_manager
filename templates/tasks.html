@@ -10,6 +10,8 @@ content %}
   {% for task in tasks %}
 
   <div class="row my-1">
+
+    <!-- Image section -->
     <div class="col-sm-12 col-md-4 sm-mb-2 asset-img-container">
       {% if task.catagory_name == "Stock" %}
       <img
@@ -31,6 +33,8 @@ content %}
       />
       {% endif %}
     </div>
+
+    <!-- Portfolio details -->
     <div class="col-sm-12 col-md-8">
       <div class="jumbotron shadow-lg bg-light">
         <h3>{{ task.task_name }}</h3>
