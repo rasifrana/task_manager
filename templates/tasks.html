@@ -1,73 +1,84 @@
-{% extends "base.html" %}
-
-{% block title%}
-Portfolio
-{% endblock %}
-
-
-{% block content %}  
+{% extends "base.html" %} {% block title%} Portfolio {% endblock %} {% block
+content %}
 <div class="container text-center p-5">
-	<h3 class="mt-5">Investment Portfolio</h3>
+  <h3 class="mt-5">Investment Portfolio</h3>
 
-	<a href="{{url_for('add_task')}}" class="btn btn-success m-5">Add Portfolio</a>
+  <a href="{{url_for('add_task')}}" class="btn btn-success m-5"
+    >Add Portfolio</a
+  >
 
+  {% for task in tasks %}
 
-	{% for task in tasks %}
+  <div class="row my-1">
+    <div class="col-sm-12 col-md-4 sm-mb-2 asset-img-container">
+      {% if task.catagory_name == "Stock" %}
+      <img
+        src="https://images.unsplash.com/photo-1579226905180-636b76d96082?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80"
+        class="img-thumbnail img-fluid"
+        alt="Responsive image"
+      />
+      {% elif task.catagory_name == "Bonds" %}
+      <img
+        src="https://images.unsplash.com/photo-1587614313085-5da51cebd8ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80"
+        class="img-thumbnail"
+        alt="Responsive image"
+      />
+      {% else %}
+      <img
+        src="https://images.unsplash.com/photo-1587614380862-0294308ae58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
+        class="img-thumbnail"
+        alt="Responsive image"
+      />
+      {% endif %}
+    </div>
+    <div class="col-sm-12 col-md-8">
+      <div class="jumbotron shadow-lg bg-light">
+        <h3>{{ task.task_name }}</h3>
+        <p>{{ task.task_description }}</p>
 
-	<div class="row my-1">
-		<div class="col-sm-12 col-md-4 sm-mb-2 asset-img-container">
-        {% if task.catagory_name == "Stock" %}
-			<img src="https://images.unsplash.com/photo-1579226905180-636b76d96082?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80" class="img-thumbnail img-fluid" alt="Responsive image">
-        {% elif task.catagory_name == "Bonds" %}
-            <img src="https://images.unsplash.com/photo-1587614313085-5da51cebd8ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80" class="img-thumbnail" alt="Responsive image">
-        {% else %}
-            <img src="https://images.unsplash.com/photo-1587614380862-0294308ae58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80" class="img-thumbnail" alt="Responsive image">
-         {% endif %} 
-            
+        <div class="row my-5">
+          <div class="col-6 p-2">
+            <div class="asset-date p-3 shadow-lg rounded">
+              <p><strong>Date Acquired</strong></p>
+              <p class="text-white"><em>{{task.due_date}}</em></p>
+            </div>
+          </div>
+
+          <div class="col-6 p-2">
+            <div class="asset-value p-3 shadow-lg rounded">
+              <p><strong>Total Value</strong></p>
+              <p class="text-white"><em>{{task.is_urgent}}</em></p>
+            </div>
+          </div>
+
+          <div class="col-6 p-2">
+            <div class="asset-catagory shadow-lg p-3 rounded">
+              <p><strong>Invesrtment Type</strong></p>
+              <p class="text-white"><em>{{task.catagory_name}}</em></p>
+            </div>
+          </div>
+
+          <div class="col-6 p-2">
+            <div class="asset-result shadow-lg p-3 ronded">
+              <p><strong>Profit / Loss</strong></p>
+              <p class="text-white"><em>-- %</em></p>
+            </div>
+          </div>
         </div>
-			<div class="col-sm-12 col-md-8">
-				<div class="jumbotron shadow-lg bg-light">
-					<h3> {{ task.task_name }} </h3>
-					<p> {{ task.task_description }} </p>
+        <a
+          href="{{url_for('delete_task', task_id = task._id)}}"
+          class="btn btn-danger btn-sm"
+          >Remove</a
+        >
+        <a
+          href="{{url_for('edit_task', task_id = task._id)}}"
+          class="btn btn-warning btn-sm"
+          >Edit
+        </a>
+      </div>
+    </div>
+  </div>
 
-					<div class="row my-5">
-						<div class="col-6 p-2">
-                            <div class="asset-date p-3 shadow-lg rounded">
-							<p> <strong>Date Acquired</strong> </p>
-							<p class="text-white"><em>{{task.due_date}}</em></p>
-                            </div>
-						</div>
-
-						<div class="col-6  p-2">
-                            <div class="asset-value p-3 shadow-lg rounded">
-							<p> <strong>Total Value</strong> </p>
-							<p class="text-white"><em>{{task.is_urgent}}</em></p>
-                            </div>
-						</div>
-
-						<div class="col-6  p-2 ">
-                            <div class="asset-catagory shadow-lg p-3 rounded">
-							<p> <strong>Invesrtment Type</strong> </p>
-							<p class="text-white"><em>{{task.catagory_name}}</em></p>
-                            </div>
-						</div>
-
-						<div class="col-6 p-2">
-                            <div class="asset-result shadow-lg p-3 ronded">
-							<p> <strong>Profit / Loss</strong> </p>
-							<p class="text-white"><em>-- %</em></p>
-                            </div>
-						</div>
-
-					</div>
-					<a href="{{url_for('delete_task', task_id = task._id)}}" class="btn btn-danger btn-sm">Remove</a>
-					<a href="{{url_for('edit_task', task_id = task._id)}}" class="btn btn-warning btn-sm">Edit </a>
-
-				</div>
-		</div>
-	</div>
-
-
-		{% endfor %}
+  {% endfor %}
 </div>
 {% endblock %}

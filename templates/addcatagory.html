@@ -1,41 +1,41 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %}
 
-{% block content %}
-
-<section class="add-portfolio-form p-5 d-flex align-items-center flex-column portfolio-form">
-
-<h2> Add A Catagory</h2>
-<div class="container form-container w-75 mt-4">
-
-
+<section
+  class="add-portfolio-form p-5 d-flex align-items-center flex-column portfolio-form"
+>
+  <h2>Add A Catagory</h2>
+  <div class="container form-container w-75 mt-4">
     <div class="row">
+      <div class="col-sm-4 form-img">
+        <img
+          src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
+          alt=""
+          class="img-fluid"
+        />
+      </div>
+      <div class="col-sm-8">
+        <form
+          class="add-portfolio-form"
+          method="POST"
+          action="{{url_for('insert_catagory')}}"
+        >
+          <div class="form-group">
+            <label for="catagory_name">Investment Type</label>
+            <input
+              id="catagory_name"
+              type="text"
+              class="form-control"
+              name="catagory_name"
+              required
+              placeholder="What is catagory?"
+            />
+          </div>
 
-
-        <div class="col-sm-4 form-img" >
-        <img  src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80" alt="" class="img-fluid">
-        
-        </div>
-        <div class="col-sm-8">
-        <form class="add-portfolio-form" method="POST" action="{{url_for('insert_catagory')}}">
-
-    
-  <div class="form-group">
-  <label for="catagory_name">Investment Type</label>
-    <input id="catagory_name" type="text" class="form-control" name="catagory_name" required placeholder="What is catagory?">
-					
-  </div>
-
-  <button type="submit" class="btn btn-sm btn-success">Submit</button>
-</form>
-        
-        </div>
-    
+          <button type="submit" class="btn btn-sm btn-success">Submit</button>
+        </form>
+      </div>
     </div>
-
-
-</div>
-
-
+  </div>
 </section>
 
 {% endblock %}

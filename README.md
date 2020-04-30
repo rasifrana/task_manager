@@ -23,9 +23,9 @@ The following activities can be performed -
 
 Wireframe for this projects (links are below).
 
-- Desktop wireframe: https://github.com/rasifrana/task_manager/blob/master/static/mockups/landing-desktop.pdf
+- Desktop wireframe: https://github.com/rasifrana/task_manager/blob/master/static/mockups/landing.pdf
 
-- Mobile Devices wireframe: https://github.com/rasifrana/task_manager/blob/master/static/mockups/mobile-version.pdf
+- Mobile Devices wireframe: https://github.com/rasifrana/task_manager/blob/master/static/mockups/landing%20mobile.pdf
 
 - All wireframes - https://github.com/rasifrana/task_manager/tree/master/static/mockups
 
