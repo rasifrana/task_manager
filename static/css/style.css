@@ -50,6 +50,8 @@ height: 60vh;
 
 }
 
+
+
 /* div.hero-img-container {
     position: relative;
 } */
@@ -241,11 +243,13 @@ img.leaf {
 }
 
 .asset-date {
-    background-image: linear-gradient(to right, rgb(202, 197, 49), rgb(243, 249, 167));
+    background-color: #63a4ff;
+background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
 }
 
-.asset-type {
-    background-image: linear-gradient(to right, rgb(41, 128, 185), rgb(109, 213, 250), rgb(255, 255, 255));
+.asset-catagory {
+    background-color: #e4eee9;
+background-image: linear-gradient(315deg, #e4eee9 0%, #93a5ce 74%);
 }
 
 .asset-result {
@@ -418,16 +422,42 @@ img.leaf {
 {
   background-color:#ea4c89
 }
-@media (max-width:767px)
-{
-  .social-icons li.title
-  {
+@media (max-width:767px) {
+  .social-icons li.title {
     display:block;
     margin-right:0;
     font-weight:600
   }
+  img.phone {
+    width: 177px;
+    transform: translate(70%, -70%);
 }
-@media only screen and (max-width: 600px) {
+
+img.leaf {
+    transform: translate(5%, 30%);
+    max-width: 100%;
+    z-index: 1;
+}
+
+.hero-img-container {
+    margin-top: -20%;
+}
+
+.sm-mb-2 {
+    margin-bottom: 1.4rem;
+}
+
+.sm-pl-1 {
+    padding-left: 1rem !important;
+}
+
+div.price {
+    font-size: 2rem;
+}
+}
+
+
+@media only screen and (max-width: 575px) {
   .main-heading {
     font-size: 2rem;
   }
@@ -440,4 +470,75 @@ img.leaf {
       width: 100% !important;
       
   }
+  .hero-img-container {
+    margin-top: 0;
+}
+
+.btn-lg {
+      font-size: .75rem;
+      padding: 0.5rem 0.75rem;
+  }
+.text-xs-center {
+    text-align: center;
+}
+
+#pricing.price-comparison {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+div.price-column {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.asset-img-container {
+    display: none;
+}
+}
+
+@media only screen and (max-width: 395px) {
+  .main-heading {
+    font-size: 1.5rem;
+  }
+
+  
+
+  .asset-type {
+      margin-top: 6rem !important;
+  }
+
+  .add-portfolio-form .form-img {
+      display: none;
+  }
+
+  .add-portfolio-form .form-container {
+      width: 100% !important;
+      
+  }
+  .hero-img-container {
+    margin-top: 0;
+}
+
+.text-xs-center {
+    text-align: center;
+}
+
+#pricing.price-comparison {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+div.price-column {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+ img.phone {
+    width: 157px;
+}
 }

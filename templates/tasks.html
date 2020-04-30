@@ -6,8 +6,8 @@ Portfolio
 
 
 {% block content %}  
-<div class="container">
-	<h3>Investment Portfolio</h3>
+<div class="container text-center p-5">
+	<h3 class="mt-5">Investment Portfolio</h3>
 
 	<a href="{{url_for('add_task')}}" class="btn btn-success m-5">Add Portfolio</a>
 
@@ -15,7 +15,7 @@ Portfolio
 	{% for task in tasks %}
 
 	<div class="row my-1">
-		<div class="col-md-4 col-sm-3">
+		<div class="col-sm-12 col-md-4 sm-mb-2 asset-img-container">
         {% if task.catagory_name == "Stock" %}
 			<img src="https://images.unsplash.com/photo-1579226905180-636b76d96082?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80" class="img-thumbnail img-fluid" alt="Responsive image">
         {% elif task.catagory_name == "Bonds" %}
@@ -25,8 +25,8 @@ Portfolio
          {% endif %} 
             
         </div>
-			<div class="col-md-8 col-sm-9">
-				<div class="jumbotron bg-light">
+			<div class="col-sm-12 col-md-8">
+				<div class="jumbotron shadow-lg bg-light">
 					<h3> {{ task.task_name }} </h3>
 					<p> {{ task.task_description }} </p>
 
@@ -46,7 +46,7 @@ Portfolio
 						</div>
 
 						<div class="col-6  p-2 ">
-                            <div class="asset-type shadow-lg p-3 rounded">
+                            <div class="asset-catagory shadow-lg p-3 rounded">
 							<p> <strong>Invesrtment Type</strong> </p>
 							<p class="text-white"><em>{{task.catagory_name}}</em></p>
                             </div>
