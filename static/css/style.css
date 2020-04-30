@@ -236,6 +236,21 @@ img.leaf {
         background-color: #0275d8;
       }
 
+.asset-value {
+    background-image: linear-gradient(to right, rgb(17, 153, 142), rgb(56, 239, 125));
+}
+
+.asset-date {
+    background-image: linear-gradient(to right, rgb(202, 197, 49), rgb(243, 249, 167));
+}
+
+.asset-type {
+    background-image: linear-gradient(to right, rgb(41, 128, 185), rgb(109, 213, 250), rgb(255, 255, 255));
+}
+
+.asset-result {
+    background-image: linear-gradient(to right, rgb(238, 156, 167), rgb(255, 221, 225));
+}
 
 /* Portfolio fORM */
 
