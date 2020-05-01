@@ -19,6 +19,10 @@ The following activities can be performed -
 - Make any changes to these types
 - No installation of application. Completely web based and responsive
 
+## Deployed Project
+
+<a href="https://portfolio-tracker-app.herokuapp.com/"><img src="https://dailysmarty-production.s3.amazonaws.com/uploads/post/img/509/feature_thumb_heroku-logo.jpg" width="60" height="60"></a>
+
 ## Wireframes
 
 Wireframe for this projects (links are below).
@@ -77,7 +81,7 @@ and results are fetched in the form of each block that contains information abou
   - Most of the interface is craeted using bootstrap 4
 
 - Google fonts
-  - to make website beautifully, Montserrat font-family was used referencing https://fonts.google.com/ CDN
+  - to make website beautifully, Karla font-family was used referencing https://fonts.google.com/ CDN
 
 - Font Awsome
   - All icons are refferenced to Font Awsome CDN
@@ -93,15 +97,36 @@ Local git repository was initated in the begining of this project and several co
 
 Project was pushed to remote repository on https://github.com/rasifrana/task_manager on master branch.
 
-## Heroku
+## Heroku Deployment Instruction
 
-Project is deployed at https://task-manager-asif.herokuapp.com/
+Project is deployed at https://portfolio-tracker-app.herokuapp.com/
 
-## Credits
+Followed instruction below to host project on heroku
+
+- Created New App on heroku
+- login from terminal using 'heroku login' command
+- create git repository
+- added remote repository provided by heroku
+- Run this command 'git push heroku master' to push 
+
+After this need to configure some setting 
+
+- Run 'pip freeze —local > requirements.txt'
+- create 'Procfile' for instruction to heroku which file is entry point
+- In the terminal run 'echo web: python app.py > Procfile'
+- git add and commit
+- git push heroku master
+
+Configuration of variables in heroku
+
+- VAR  IP.     0.0.0.0
+- VAR  PORT    5000
+- VAR  MONGO_DBNAME  importing from env.py file
+- VAR  MONGO_URI     importing from env.py file
 
 ### Media
 
-- The photo used in this site were obtained from https://unsplash.com
+- The photo used in this site were obtained from https://unsplash.com and pexels.com
 
 ### Acknowledgements
 
