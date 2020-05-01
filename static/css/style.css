@@ -5,6 +5,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Styles on body */
 body {
   height: 100%;
   margin: 0;
@@ -12,6 +14,7 @@ body {
   overflow-x: hidden;
 }
 
+/*  Navbar */
 nav {
   height: 4rem;
 }
@@ -36,6 +39,7 @@ nav {
   display: inline-block;
 }
 
+/* Landing page styling */
 main.header {
   background: #e5ecee;
   margin-top: -25px;
@@ -54,6 +58,7 @@ img.leaf {
   z-index: 1;
 }
 
+/* Price Section Styling */
 .price-comparison {
   display: flex;
   justify-content: center;
@@ -172,7 +177,6 @@ img.leaf {
 
 .price-column.popular .cta {
   background-color: white;
-  color: var(--accent-color);
 }
 
 .cta:hover,
@@ -180,6 +184,7 @@ img.leaf {
   transform: scale(1.2);
 }
 
+/* CEO message section */
 .message {
   background-color: #e5ecee;
 }
@@ -191,15 +196,7 @@ img.leaf {
   flex-direction: column;
 }
 
-.main h1 {
-  font-size: 5rem;
-  text-transform: uppercase;
-}
-
-.upper-svg {
-  background-color: #0275d8;
-}
-
+/* Portfolio page styling */
 .asset-value {
   background-image: linear-gradient(
     to right,
@@ -298,6 +295,8 @@ img.leaf {
 .copyright-text {
   margin: 0;
 }
+
+/* Media Queries */
 @media (max-width: 991px) {
   .site-footer [class^="col-"] {
     margin-bottom: 30px;
