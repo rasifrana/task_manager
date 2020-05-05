@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block title%} Portfolio {% endblock %} {% block
 content %}
-<div class="container text-center p-5">
+<div class="container text-center py-5">
   <h3 class="mt-5">Investment Portfolio</h3>
 
   <a href="{{url_for('add_task')}}" class="btn btn-success m-5"
@@ -13,21 +13,36 @@ content %}
 
     <!-- Image section -->
     <div class="col-sm-12 col-md-4 sm-mb-2 asset-img-container">
-      {% if task.catagory_name == "Stock" %}
+      {% if task.catagory_name == "Stocks" %}
       <img
-        src="https://images.unsplash.com/photo-1579226905180-636b76d96082?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80"
+        src="https://images.unsplash.com/photo-1518186233392-c232efbf2373?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2467&q=80"
         class="img-thumbnail img-fluid"
         alt="Responsive image"
       />
       {% elif task.catagory_name == "Bonds" %}
       <img
-        src="https://images.unsplash.com/photo-1587614313085-5da51cebd8ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80"
+        src="https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2548&q=80"
         class="img-thumbnail"
         alt="Responsive image"
       />
+
+      {% elif task.catagory_name == "Real Estate" %}
+      <img
+        src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80"
+        class="img-thumbnail"
+        alt="Responsive image"
+      />
+
+      {% elif task.catagory_name == "Crypto" %}
+      <img
+        src="https://images.unsplash.com/photo-1518478164902-9e0290e8d7d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2549&q=80"
+        class="img-thumbnail"
+        alt="Responsive image"
+      />
+
       {% else %}
       <img
-        src="https://images.unsplash.com/photo-1587614380862-0294308ae58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80"
+        src="https://images.unsplash.com/photo-1427751840561-9852520f8ce8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2555&q=80"
         class="img-thumbnail"
         alt="Responsive image"
       />
@@ -57,7 +72,7 @@ content %}
 
           <div class="col-6 p-2">
             <div class="asset-catagory shadow-lg p-3 rounded">
-              <p><strong>Invesrtment Type</strong></p>
+              <p><strong> Category</strong></p>
               <p class="text-white"><em>{{task.catagory_name}}</em></p>
             </div>
           </div>
