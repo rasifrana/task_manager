@@ -43,7 +43,7 @@ nav {
 main.header {
   background: #e5ecee;
   margin-top: -25px;
-  height: 60vh;
+  min-height: 60vh;
 }
 
 img.phone {
