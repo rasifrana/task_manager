@@ -366,6 +366,8 @@ img.leaf {
 .social-icons a.dribbble:hover {
   background-color: #ea4c89;
 }
+
+
 @media (max-width: 767px) {
   .social-icons li.title {
     display: block;
@@ -374,18 +376,18 @@ img.leaf {
   }
   img.phone {
     width: 177px;
-    transform: translate(70%, -70%);
+    transform: translate(70%, -50%);
   }
 
   img.leaf {
-    transform: translate(5%, 30%);
+    transform: translate(5%, 40%);
     max-width: 100%;
     z-index: 1;
   }
 
-  .hero-img-container {
+  /* .hero-img-container {
     margin-top: -20%;
-  }
+  } */
 
   .sm-mb-2 {
     margin-bottom: 1.4rem;
