@@ -150,6 +150,10 @@ img.leaf {
   height: auto;
 }
 
+.media img {
+  object-fit: cover;
+}
+
 .most-popular {
   position: absolute;
   top: 0.5rem;
